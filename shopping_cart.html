@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shopping Cart</title>
+    <style>
+        :root {
+    --brandy-punch: #d78935;
+    --quarter-spanish-white: #f9f2e7;
+    --brandy-rose: #b88b74;
+    --sandrift: #ac967a;
+}
+        body {
+            display: flex;
+            justify-content: center; 
+            height: 100vh;           
+            margin: 0;              
+            font-family: Arial, sans-serif;
+            background: 
+            linear-gradient(rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0.5)), /* white overlay 50% */
+            url(images/Orange\ and\ Brown\ Watercolor\ Leaves\ Autumn\ Phone\ Wallpaper.png);
+            background-repeat: no-repeat;
+            background-size: cover;
+           
+          
+    }
+
+        div {
+            text-align: center;      
+        }
+
+        h1 {
+            font-family: 'Brush Script MT', cursive;
+            color: var(--brandy-rose); 
+            font-size: 7vh;
+          
+        }
+        h3 { 
+            font-family: 'Brush Script MT', cursive;
+            color: var(--brandy-rose); 
+            font-size: 5vh;
+            margin-bottom: 5px;
+            text-decoration: underline;
+        }
+        input::placeholder {
+            color: var(--sandrift);
+        }
+        input, button {
+            margin: 5px;
+            padding: 5px 10px;
+            font-size: 16px;
+            border-radius: 10px;
+            color: var(--sandrift);
+            border-color: var(--sandrift);
+            background-color: var(--quarter-spanish-white);
+          
+        }
+
+        li {
+            color: var(--brandy-punch);
+            display: flex;
+            justify-content: space-between;
+            font-size: 3vh;
+        }
+      
+
+        input:focus{ 
+            margin: 5px;
+            padding: 5px 10px;
+            font-size: 16px;
+            border-radius: 10px;
+            color: var(--brandy-punch);
+            border-color: var(--brandy-punch);
+            background-color: var(--quarter-spanish-white);
+        }
+
+        ul { 
+            padding: 10px;;
+        }
+        
+        #stats {
+            color: var(--sandrift);
+            margin: 100px;
+        }
+
+        .complete {
+            text-decoration: line-through;
+            color: var(--sandrift);
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <h1>Shopping List</h1>
+        <input id="item-input" type="text" placeholder="Enter Item">
+        <br><button id="add-btn">Add</button>
+        <button id="clear-completed">Clear Complete</button>
+        <div id="empty"></div>
+        <h3>Items:</h3>
+        <ul id="shopping-list">
+
+        </ul>
+        <div id="stats">
+            <p>Total items: <span id="total-count">0</span></p>
+            <p>Completed items: <span id="completed-count">0</span></p>
+            <p>Remaining items: <span id="remaining-count">0</span></p>
+        </div>
+ 
+    </div>
+       <script src="shopping_cart.js"></script>
+</body>
+</html>
